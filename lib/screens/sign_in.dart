@@ -3,6 +3,8 @@ import 'package:alghadim/size_config.dart';
 import 'package:alghadim/constants.dart';
 import 'package:alghadim/components/buttons.dart';
 
+import 'package:alghadim/screens/welcome.dart';
+
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);
 
@@ -105,7 +107,9 @@ class _SignFormState extends State<SignForm> {
           SizedBox(height: getPropScreenHeight(20)),
           DefaultButton(
             text: "Continue",
-            press: () {},
+            press: () {
+              Navigator.pushNamed(context, WelcomeScreen.routeName);
+            },
           ),
         ],
       ),
